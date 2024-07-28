@@ -1,2 +1,8 @@
+# Node.js
 node_modules
+
+# TypeScript output directory
 dist
+
+# Mac OS files
+.DS_Store

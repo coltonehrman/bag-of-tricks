@@ -11,6 +11,7 @@
   "author": "Colton Ehrman",
   "license": "MIT",
   "devDependencies": {
+    "@changesets/cli": "^2.27.7",
     "typescript": "^5.5.4",
     "vitest": "^2.0.4",
     "xo": "^0.59.3"
