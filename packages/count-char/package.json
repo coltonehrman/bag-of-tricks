@@ -1,8 +1,15 @@
 {
   "name": "@cehrman/count-char",
   "version": "0.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "tsc",
+    "test": "xo && vitest run"
+  },
   "devDependencies": {
     "@cehrman/tsconfig": "workspace:^",
+    "typescript": "^5.5.4",
     "vitest": "^2.0.4"
   }
 }

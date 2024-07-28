@@ -1,6 +1,5 @@
-/* eslint-disable @typescript-eslint/no-unsafe-call */
 import {expect, test} from 'vitest';
-import {isIp} from './index.js';
+import {isIp} from '../src/index.js';
 
 test('isIp', () => {
 	expect(isIp('8.8.8.8')).toBe(true);

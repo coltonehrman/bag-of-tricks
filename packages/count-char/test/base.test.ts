@@ -1,6 +1,5 @@
-/* eslint-disable @typescript-eslint/no-unsafe-call */
 import {expect, test} from 'vitest';
-import {countChar} from './index.js';
+import {countChar} from '../src/index.js';
 
 test('countChar', () => {
 	expect(countChar('abc', 'a')).toBe(1);

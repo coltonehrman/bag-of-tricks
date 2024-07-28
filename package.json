@@ -4,7 +4,9 @@
   "description": "A bag of tools",
   "scripts": {
     "dev": "vitest",
-    "test": "xo && vitest run"
+    "test": "xo && vitest run",
+    "test:packages": "pnpm test -r",
+    "test:packages:parallel": "pnpm test -r --parallel"
   },
   "author": "Colton Ehrman",
   "license": "MIT",
