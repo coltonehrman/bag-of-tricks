@@ -1,5 +1,5 @@
 {
-  "name": "bag-of-tools",
+  "name": "@cehrman/bag-of-tools",
   "version": "0.0.0",
   "description": "A bag of tools",
   "scripts": {
