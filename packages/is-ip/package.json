@@ -1,0 +1,8 @@
+{
+  "name": "@cehrman/is-ip",
+  "version": "0.0.0",
+  "devDependencies": {
+    "@cehrman/tsconfig": "workspace:^",
+    "vitest": "^2.0.4"
+  }
+}
