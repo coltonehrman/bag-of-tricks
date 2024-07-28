@@ -1,0 +1,6 @@
+{
+  "name": "@cehrman/module-a",
+  "devDependencies": {
+    "@cehrman/tsconfig": "workspace:^"
+  }
+}

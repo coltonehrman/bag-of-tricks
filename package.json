@@ -1,0 +1,15 @@
+{
+  "name": "bag-of-tools",
+  "version": "0.0.0",
+  "description": "A bag of tools",
+  "scripts": {
+    "dev": "vitest",
+    "test": "vitest run"
+  },
+  "author": "Colton Ehrman",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.4"
+  }
+}
