@@ -15,3 +15,23 @@ pnpm add -D @cehrman/tsconfig --filter @cehrman/module-a --workspace
 This command will add the local package `@cehrman/tsconfig` as a **dev dependency** to the local package `@cehrman/module-a`. _Notice this usage of **pnpm** special protocol `workspace:` is used when doing this._
 
 [`pnpm add` docs](https://pnpm.io/cli/add)
+
+## Releasing
+
+### Create Changeset
+
+```sh
+pnpm changeset
+```
+
+### Version Packages
+
+```sh
+pnpm changeset version
+```
+
+### Publish Packages
+
+```sh
+pnpm changeset publish
+```
