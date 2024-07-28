@@ -1,3 +1,5 @@
 {
-  "name": "@cehrman/tsconfig"
+  "name": "@cehrman/tsconfig",
+  "version": "0.0.1",
+  "private": true
 }
