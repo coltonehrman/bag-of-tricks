@@ -18,7 +18,13 @@ export function isIp(value: string) {
 			return false;
 		}
 
-		if (Number.isNaN(Number(part))) {
+		const n = Number(part);
+
+		if (Number.isNaN(n)) {
+			return false;
+		}
+
+		if (n < 0 || n > 255) {
 			return false;
 		}
 	}
