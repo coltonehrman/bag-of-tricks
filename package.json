@@ -4,12 +4,13 @@
   "description": "A bag of tools",
   "scripts": {
     "dev": "vitest",
-    "test": "vitest run"
+    "test": "xo && vitest run"
   },
   "author": "Colton Ehrman",
   "license": "MIT",
   "devDependencies": {
     "typescript": "^5.5.4",
-    "vitest": "^2.0.4"
+    "vitest": "^2.0.4",
+    "xo": "^0.59.3"
   }
 }
