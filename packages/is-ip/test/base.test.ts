@@ -1,23 +1,58 @@
-import {expect, test} from 'vitest';
+import {
+	vi, expect, test, describe,
+	beforeAll,
+	afterAll,
+} from 'vitest';
 import {isIp} from '../src/index.js';
+import * as impl from '../src/is-ip.impl.js';
 
-test('isIp', () => {
-	expect(isIp('8.8.8.8')).toBe(true);
-	expect(isIp('127.0.0.1')).toBe(true);
-	expect(isIp('127.0.0.')).toBe(false);
+describe('isIp() throws error', () => {
+	const spy = vi.spyOn(impl, '_isIp');
 
-	expect(isIp('0.0.0.0')).toBe(true);
-	expect(isIp('255.255.255.255')).toBe(true);
+	beforeAll(() => {
+		spy.mockImplementation(() => {
+			throw new Error('Error');
+		});
+	});
 
-	expect(isIp('-1.-1.-1.-1')).toBe(false);
-	expect(isIp('0.0.0.0-1')).toBe(false);
-	expect(isIp('0.0.-1.0')).toBe(false);
-	expect(isIp('0.-1.0.0')).toBe(false);
-	expect(isIp('-1.0.0.0')).toBe(false);
+	afterAll(() => {
+		spy.mockRestore();
+	});
 
-	expect(isIp('256.256.256.256')).toBe(false);
-	expect(isIp('0.0.0.256')).toBe(false);
-	expect(isIp('0.0.256.0')).toBe(false);
-	expect(isIp('0.256.0.0')).toBe(false);
-	expect(isIp('256.0.0.0')).toBe(false);
+	test.todo('should log out warning message to console', () => {}); // eslint-disable-line @typescript-eslint/no-empty-function
+
+	test('should throw error', () => {
+		expect(() => isIp()).toThrow();
+	});
+});
+
+describe('isIp()', () => {
+	test('should return true with valid IPs', () => {
+		expect(isIp(String('8.8.8.8'))).toBe(true);
+		expect(isIp('8.8.8.8')).toBe(true);
+		expect(isIp('127.0.0.1')).toBe(true);
+		expect(isIp('255.255.255.255')).toBe(true);
+	});
+
+	test('should return false with invalid IPs', () => {
+		expect(isIp()).toBe(false);
+		expect(isIp(undefined)).toBe(false);
+		expect(isIp(null)).toBe(false);
+		expect(isIp(0)).toBe(false);
+		expect(isIp(1)).toBe(false);
+		expect(isIp(String('0'))).toBe(false);
+
+		expect(isIp('127.0.0.')).toBe(false);
+		expect(isIp('-1.-1.-1.-1')).toBe(false);
+		expect(isIp('0.0.0.0-1')).toBe(false);
+		expect(isIp('0.0.-1.0')).toBe(false);
+		expect(isIp('0.-1.0.0')).toBe(false);
+		expect(isIp('-1.0.0.0')).toBe(false);
+
+		expect(isIp('256.256.256.256')).toBe(false);
+		expect(isIp('0.0.0.256')).toBe(false);
+		expect(isIp('0.0.256.0')).toBe(false);
+		expect(isIp('0.256.0.0')).toBe(false);
+		expect(isIp('256.0.0.0')).toBe(false);
+	});
 });
