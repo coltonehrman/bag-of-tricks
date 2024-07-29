@@ -6,6 +6,7 @@
     "main": "dist/index.js"
   },
   "scripts": {
+    "prepare": "pnpm run build",
     "prebuild": "rm -rf dist",
     "build": "tsc",
     "test": "xo && vitest run"
