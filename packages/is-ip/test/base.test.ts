@@ -7,22 +7,27 @@ import {isIp} from '../src/index.js';
 import * as impl from '../src/is-ip.impl.js';
 
 describe('isIp() throws error', () => {
-	const spy = vi.spyOn(impl, '_isIp');
+	const _isIpSpy = vi.spyOn(impl, '_isIp');
+	const consoleWarnSpy = vi.spyOn(console, 'warn');
 
 	beforeAll(() => {
-		spy.mockImplementation(() => {
+		_isIpSpy.mockImplementation(() => {
 			throw new Error('Error');
 		});
 	});
 
 	afterAll(() => {
-		spy.mockRestore();
+		_isIpSpy.mockRestore();
 	});
-
-	test.todo('should log out warning message to console', () => {}); // eslint-disable-line @typescript-eslint/no-empty-function
 
 	test('should throw error', () => {
 		expect(() => isIp()).toThrow();
+	});
+
+	test('should log out warning message to console', () => {
+		expect(() => isIp()).toThrow();
+		expect(consoleWarnSpy).toHaveBeenCalledWith(`isIp() triggered an error, this should not happen.
+Check with @coltonje95 or open an issue at https://github.com/coltonehrman/bag-of-tools`);
 	});
 });
 
