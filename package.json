@@ -4,7 +4,8 @@
   "description": "A bag of tools",
   "scripts": {
     "dev": "vitest",
-    "test": "xo && vitest run",
+    "lint": "xo",
+    "test": "pnpm lint && vitest run",
     "test:packages": "pnpm test -r",
     "test:packages:parallel": "pnpm test -r --parallel"
   },

@@ -9,7 +9,8 @@
     "prepare": "pnpm run build",
     "prebuild": "rm -rf dist",
     "build": "tsc",
-    "test": "xo && vitest run",
+    "lint": "xo",
+    "test": "pnpm lint && vitest run",
     "bench": "vitest bench",
     "bench:baseline": "vitest bench --outputJson=./test/__benchmarks__/baseline.json",
     "bench:compare": "vitest bench --compare=./test/__benchmarks__/baseline.json --watch=false"

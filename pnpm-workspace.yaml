@@ -1,4 +1,8 @@
 packages:
+  # all packages in direct subdirs of examples/
+  - "examples/*"
+  # all packages in direct subdirs of examples/express
+  - "examples/express/*"
   # all packages in direct subdirs of packages/
   - "packages/*"
   # exclude packages that are inside test directories
