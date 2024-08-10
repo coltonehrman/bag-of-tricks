@@ -43,6 +43,28 @@ importers:
         specifier: ^2.0.4
         version: 2.0.4(@types/node@22.0.0)(terser@5.31.3)
 
+  examples/express/error-stack-trace:
+    dependencies:
+      express:
+        specifier: ^4.19.2
+        version: 4.19.2
+    devDependencies:
+      '@cehrman/tsconfig':
+        specifier: workspace:^
+        version: link:../../../packages/tsconfig
+      '@types/express':
+        specifier: ^4.17.21
+        version: 4.17.21
+      '@types/supertest':
+        specifier: ^6.0.2
+        version: 6.0.2
+      supertest:
+        specifier: ^7.0.0
+        version: 7.0.0
+      vitest:
+        specifier: ^2.0.4
+        version: 2.0.4(@types/node@22.0.0)(terser@5.31.3)
+
   packages/count-char:
     devDependencies:
       '@cehrman/tsconfig':
