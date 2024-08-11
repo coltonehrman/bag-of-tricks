@@ -35,3 +35,5 @@ pnpm changeset version
 ```sh
 pnpm changeset publish
 ```
+
+[`changeset` docs](https://github.com/changesets/changesets/blob/main/packages/cli/README.md)
