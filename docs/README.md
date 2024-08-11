@@ -12,7 +12,7 @@ Example:
 pnpm add -D @cehrman/tsconfig --filter @cehrman/module-a --workspace
 ```
 
-This command will add the local package `@cehrman/tsconfig` as a **dev dependency** to the local package `@cehrman/module-a`. _Notice the usage of **pnpm** special protocol `workspace:` is used when doing this._
+This command will add the local package `@cehrman/tsconfig` as a **dev dependency** to the local package `@cehrman/module-a`. _Notice the **pnpm** special protocol `workspace:` is used when doing this._
 
 [`pnpm add` docs](https://pnpm.io/cli/add)
 
