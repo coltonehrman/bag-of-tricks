@@ -43,7 +43,7 @@ importers:
         specifier: ^2.0.4
         version: 2.0.4(@types/node@22.0.0)(terser@5.31.3)
 
-  examples/express/cache-control-header copy:
+  examples/express/error-stack-trace:
     dependencies:
       express:
         specifier: ^4.19.2
@@ -65,7 +65,7 @@ importers:
         specifier: ^2.0.4
         version: 2.0.4(@types/node@22.0.0)(terser@5.31.3)
 
-  examples/express/error-stack-trace:
+  examples/express/headers-sent-options-request:
     dependencies:
       express:
         specifier: ^4.19.2
